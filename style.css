@@ -1,8 +1,19 @@
 * {
 	font-size: 20px;
+	font-family: 'Robotoj', sans-serif;
+	/*Tipo de letra Roboto editada para verlo despues*/
 }
 
+a {
+	text-decoration: none;
+	color: #4D4B4B;
+}
 
+h1 {
+	text-align: left;
+	margin: 50px;
+	width: 400px;
+}
 
 .grid-container {
 	display: flex;
@@ -11,14 +22,13 @@
 }
 
 .grid-header {
-	padding: 20px;
-	background: lightblue;
+	background: #B0AFB3;
 	flex-basis: 50px;
 }
 
 .grid-section {
 	padding: 20px;
-	background-color: slateblue;
+	background-color: #6A668E;
 	flex-basis: 600px;
 	flex-grow: 2;
 	flex-shrink: 0;
@@ -26,27 +36,26 @@
 
 .grid-aside {
 	padding: 20px;
-	background-color: darkslateblue;
+	background-color: #D6D4DD;
 	flex-basis: 200px;
 	flex-grow: 1;
 	flex-shrink: 0;
-	
+	overflow: auto;
+	color: #545151;
 }
 
 .grid-footer {
 	padding: 20px;
-	background-color: violet;
+	background-color: #888DA5;
 	flex-grow: 1;
 }
 
 
-
-
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 800px) {
 	.grid-container {
 		display: grid;
 		grid-template-rows: 60px 1fr 1fr 1fr 1fr 60px;
-		grid-template-columns: 1fr 1fr 300px;
+		grid-template-columns: 1fr 1fr 320px;
 	}
 
 	.grid-header {
@@ -56,62 +65,48 @@
 	.grid-section {
 		grid-row: 2 / 6;
 		grid-column: 1 / span 2;	
-	}
+		background-image: url(fondo-responsive.jpg);
+		background-size: cover;
+		background-position: center;
+}
 
 	.grid-aside {
 		grid-row: 2 / span 4;
 		grid-column: 3;
-
 	}
 
 	.grid-footer {
 		grid-row:  6;	
 		grid-column: 1 / span 3;
+		text-align: center;
 	}
 }
 
 .logo-img {
-	text-align: left;
+	margin: 5px;
+	float: left;
+	width: 100px;
 }
 
 .contacto {
-	text-align: right;
+	padding: 20px;
+	float: right;
 }
 
-/* Responsive con FLEX*/
-
-/*
-@media screen and (min-width: 700px) {
-	.flex-responsive {
-		flex-direction: row;
-		flex-wrap: wrap;
-	}
-
-	.header {
-		flex-basis: 100%;
-		max-height: 60px;  
-	}
-
-	.section, .aside {
-		height: 85%;
-	}
 
 
-	.section {
-		flex-grow: 4;
-	}
-
-	.aside {
-		flex-grow: 1;
-	}
-
-	.footer {
-		flex-basis: 100%
-
-	}
+.parrafo-descripcion {
+	width: 300px;
+	margin: 100px 50px;
+	font-size: 25px;
 }
 
-*/	
+.subtitulos-aside {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: black;
+	font-size: 24px;
+}
 /*Background*/
 
 /*

@@ -3,75 +3,84 @@
 }
 
 
-.flex-responsive, .grid-responsive {
+
+.grid-container {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
 }
 
-.header, .section, .aside, .footer, .header2, .section2, .aside2, .footer2 {
+.grid-header {
 	padding: 20px;
-	
-}
-
-.header, .header2 {
-	background-color: lightblue;
+	background: lightblue;
 	flex-basis: 50px;
 }
 
-.section, .section2 {
+.grid-section {
+	padding: 20px;
 	background-color: slateblue;
 	flex-basis: 600px;
 	flex-grow: 2;
 	flex-shrink: 0;
-
 }
 
-.aside, .aside2 {
+.grid-aside {
+	padding: 20px;
 	background-color: darkslateblue;
-	flex-basis: 300px;
+	flex-basis: 200px;
 	flex-grow: 1;
 	flex-shrink: 0;
-}
-
-.footer, .footer2 {
-	background-color: violet;
-	flex-grow: 1;
 	
 }
 
-/*Respnsive con GRID*/
+.grid-footer {
+	padding: 20px;
+	background-color: violet;
+	flex-grow: 1;
+}
+
+
+
+
 @media screen and (min-width: 700px) {
-	.grid-responsive {
+	.grid-container {
 		display: grid;
 		grid-template-rows: 60px 1fr 1fr 1fr 1fr 60px;
-		grid-template-columns: repeat(3,1fr);
+		grid-template-columns: 1fr 1fr 300px;
 	}
 
-	.header2 {
+	.grid-header {
 		grid-column: 1 / span 3;
 	}
 
-	.section2 {
+	.grid-section {
 		grid-row: 2 / 6;
 		grid-column: 1 / span 2;	
 	}
 
-	.aside2 {
+	.grid-aside {
 		grid-row: 2 / span 4;
 		grid-column: 3;
 
 	}
 
-	.footer2 {
+	.grid-footer {
 		grid-row:  6;	
 		grid-column: 1 / span 3;
 	}
 }
 
+.logo-img {
+	text-align: left;
+}
+
+.contacto {
+	text-align: right;
+}
 
 /* Responsive con FLEX*/
 
+/*
 @media screen and (min-width: 700px) {
 	.flex-responsive {
 		flex-direction: row;
@@ -101,8 +110,11 @@
 
 	}
 }
-	
+
+*/	
 /*Background*/
+
+/*
 .container {
 	height: 400px;
 	width: 460px;
@@ -112,8 +124,8 @@
 	background-image: url(https://cdn-cf-east.streamable.com/image/7x7jnl.jpg?Expires=1639432260&Signature=ZVpfXUO98IBK85dBGlnE~vhm17MbFUpYWsAMlgfq-qcQxg6MOOU~bCNywe5-iw2kiBmmBou6V7HI9gyvEL6Yi2RG3mlFzbVy~cRVM7rrvis-GYGoXbA~2TvORQJHIfMUbI~acERDhyakYXm7w1syiYKYDy8RgQFwZ2JArjK8ZhBG-5DMjII3e0ilvzqadjSDiaS7iIWp4AgA7j9MwhhQ3XuxwVSgH~FJ9LNe7etGX8p9DQh7kNZkKRx1vc467oBMCf9zOpFML1iDGqyeDQZhgFQh3VEoR8CoQGluokCX7SKvDbVLTlPIbmXizzFhzxksCRozhEqTD0PPMqHjhmSk9g__&Key-Pair-Id=APKAIEYUVEN4EVB2OKEQ);
 	background-size: cover;  
 	background-position: center;
-	 
 }
+*/
 
 /*	Transisiones de varias cajas moviendose
 .caja {

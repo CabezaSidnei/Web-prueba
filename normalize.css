@@ -11,6 +11,9 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: 18px;
+  font-family: 'Robotoj', sans-serif;
+  /*Tipo de letra Roboto editada para verlo despues*/
 }
 
 html {

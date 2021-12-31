@@ -1,1 +1,90 @@
- 
+
+.grid-container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+.grid-header {
+	background: #B0AFB3;
+	flex-grow: 1;
+	flex-basis: .3vh;
+}
+
+.grid-section {
+	background-image: url(imagenes/fondo-responsive.jpg);
+	background-size: cover;
+	background-position: center;
+	flex-grow: 10;
+
+}
+
+.grid-aside {
+	padding: 1vw;
+	background-color: #D6D4DD;
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	flex-basis: .3vh;
+}
+
+.grid-footer {
+	padding: 1vw;
+	background-color: #888DA5;
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+	flex-basis: .3vh;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 2vh;
+	font-size: 6vw;
+	text-shadow: 2px 2px 1px white;
+}
+
+.parrafo-descripcion {
+	text-align: justify;
+	font-size: 4vw;
+	text-shadow: 1px 1px 1px white;
+	margin: 2vh;
+}
+
+a {
+	text-decoration: none;
+	color: #4D4B4B;
+}
+
+.logo-img {
+	float: left;
+	width: 15vh;
+}
+
+.contacto {
+	float: right;
+	color: #4D4B4B;
+}
+
+.link-contacto {
+	font-size: 3vw;
+}
+
+.instagram {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-right: 5px;
+}
+
+.facebook {
+	width: 30px;
+	height: 30px;
+	float: left;
+	margin-left: 5px;
+}
+
+.grid-aside__item {
+	margin-left: 5vw;
+	margin-right: 5vw;
+}

@@ -1,19 +1,17 @@
-* {
-	font-size: 20px;
-	font-family: 'Robotoj', sans-serif;
-	/*Tipo de letra Roboto editada para verlo despues*/
+/*
+h1 {
+	text-align: left;
+	width: 400px;
+	margin-top: 60px;
+	margin-left: 50px;
+	margin-right: 350px;
+	font-size: 2em;
+	text-shadow: 2px 2px 1px white;
 }
 
 a {
 	text-decoration: none;
 	color: #4D4B4B;
-}
-
-h1 {
-	text-align: left;
-	margin: 50px;
-	font-size: 2em;
-	text-shadow: 2px 2px 1px white;
 }
 
 .logo-img {
@@ -30,7 +28,7 @@ h1 {
 .parrafo-descripcion {
 	width: 300px;
 	margin: 100px 50px;
-	font-size: 25px;
+	font-size: 1em;
 	text-shadow: 1px 1px 1px white;
 }
 
@@ -75,6 +73,7 @@ h1 {
 	background-image: url(imagenes/fondo-responsive.jpg);
 	background-size: cover;
 	background-position: center;
+	overflow: auto;
 
 }
 
@@ -111,6 +110,7 @@ h1 {
 	.grid-section {
 		grid-row: 2 / 6;
 		grid-column: 1 / span 2;	
+		justify-content: center;
 }
 
 	.grid-aside {
@@ -123,5 +123,7 @@ h1 {
 		grid-row:  6;	
 		grid-column: 1 / span 3;
 	}
+
 }
 
+*/

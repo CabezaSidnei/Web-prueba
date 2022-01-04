@@ -9,6 +9,7 @@
 		<meta name="copyright" content="Empresa Sidnei Sánchez">
 		<meta name="robots" content="index">
 		<meta name="robots" content="follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="imagenes/Icono_logo.ico">
 		<link rel="stylesheet" type="text/css" href="normalize.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -20,8 +21,8 @@
 		<div class="grid-container">
 			<header class="grid-header">
 				<nav>
-					<a class="logo-img" href="#"><img src="imagenes/Logo.png"></a>
-					<a class="contacto" href="#">Contacto</a>
+					<a class="logo-img" href="index.html" aria-label="Inicio"><img src="imagenes/Logo.png" alt=""></a>
+					<a class="contacto" href="#" aria_label="Formulario de contacto">Contacto</a>
 				</nav>
 				
 			</header>
@@ -31,56 +32,88 @@
 					<p class="parrafo-descripcion">Esta página fue creada con el proposito de practicar el desarrollo de aplicaciones web con tecnologías Html, CSS, Javascript, PHP, Python, MySql, Java SE, Java EE, .NET, Android, y Kotlin, aplicando diferentes metodologías y documentación de sistemas.</p>
 			</section>
 
+			<!--Menu aside mobile-->
 			<aside class="grid-aside">
-				
-					<div class="grid-aside__item tecnologías"><img src="imagenes/logo_tecno.png"></div>	
-					<div class="grid-aside__item Pruebas"><img src="imagenes/logo_prueba.png"></div>
-					<div class="grid-aside__item metodologías"><img src="imagenes/logo_meto.png"></div>
-					<div class="grid-aside__item documentación"><img src="imagenes/logo_docu.png"></div>	
-				
-				
+				<div class="menu-mobile">
+					<img src="imagenes/logo_tecno.png">
+					<ul class="grid-aside__item tecnologias">
+						<li><a href="#">HTML</a></li>
+						<li><a href="#">CSS</a></li>
+						<li><a href="#">Javascript</a></li>
+						<li><a href="#">PHP</a></li>
+						<li><a href="#">Python</a></li>
+						<li><a href="#">MySql</a></li>
+						<li><a href="#">Java SE</a></li>
+						<li><a href="#">Java EE</a></li>
+						<li><a href="#">.NET</a></li>
+						<li><a href="#">Android</a></li>
+						<li><a href="#">Kotlin</a></li>
+					</ul>	
+					<ul class="grid-aside__item Pruebas"><img src="imagenes/logo_prueba.png">
+						<li><a href="#">Animaciones</a></li>
+						<li><a href="#">Juegos</a></li>
+						<li><a href="#">Implementación de API´s</a></li>
+						<li><a href="#">Patrones de diseño</a></li>	
+						<li><a href="#">Responsive design</a></li>
+						<li><a href="#">Implementación de seguridad</a></li>
+					</ul>
+					<ul class="grid-aside__item metodologías"><img src="imagenes/logo_meto.png">
+						<li><a href="#">Metodologías tradicionales</a></li>
+						<li><a href="#">Metodologías ágiles</a></li>
+					</ul>	
+					<ul class="grid-aside__item documentación"><img src="imagenes/logo_docu.png">
+						<li><a href="#">Análisis de riesgos</a></li>
+						<li><a href="#">Estudio de factibilidad</a></li>
+						<li><a href="#">RES</a></li>
+						<li><a href="#">Calidad</a></li>
+						<li><a href="#">Plan de testing</a></li>
+						<li><a href="#">WBS</a></li>
+						<li><a href="#">GANTT</a></li>
+						<li><a href="#">Manual de usuario</a></li>
+						<li><a href="#">Diagramas</a></li>
+					</ul>
+				</div>	
 			</aside>
 
-			<!--Menu aside pantalla grande
-			<aside class="grid-item grid-aside">
+			<!--Menu aside pc-->
+			<aside class="grid-aside">
+				<div class="menu-pc">
+					<p class="subtitulos-aside">Tecnologías utilizadas</p>
+					<p><a href="#">HTML</a></p>
+					<p><a href="#">CSS</a></p>
+					<p><a href="#">Javascript</a></p>
+					<p><a href="#">PHP</a></p>
+					<p><a href="#">Python</a></p>
+					<p><a href="#">MySql</a></p>
+					<p><a href="#">Java SE</a></p>
+					<p><a href="#">Java EE</a></p>
+					<p><a href="#">.NET</a></p>
+					<p><a href="#">Android</a></p>
+					<p><a href="#">Kotlin</a></p>
 
-				<p class="subtitulos-aside">Tecnologías utilizadas</p>
-				<p><a href="#">HTML</a></p>
-				<p><a href="#">CSS</a></p>
-				<p><a href="#">Javascript</a></p>
-				<p><a href="#">PHP</a></p>
-				<p><a href="#">Python</a></p>
-				<p><a href="#">MySql</a></p>
-				<p><a href="#">Java SE</a></p>
-				<p><a href="#">Java EE</a></p>
-				<p><a href="#">.NET</a></p>
-				<p><a href="#">Android</a></p>
-				<p><a href="#">Kotlin</a></p>
+					<p class="subtitulos-aside">Pruebas de desarrollo</p>
+					<p><a href="#">Animaciones</a></p>
+					<p><a href="#">Juegos</a></p>
+					<p><a href="#">Implementación de API´s</a></p>
+					<p><a href="#">Patrones de diseño</a></p>
+					<p><a href="#">Responsive design</a></p>
+					<p><a href="#">Implementación de seguridad</a></p>
 
-				<p class="subtitulos-aside">Pruebas de desarrollo</p>
-				<p><a href="#">Animaciones</a></p>
-				<p><a href="#">Juegos</a></p>
-				<p><a href="#">Implementación de API´s</a></p>
-				<p><a href="#">Patrones de diseño</a></p>
-				<p><a href="#">Responsive design</a></p>
-				<p><a href="#">Implementación de seguridad</a></p>
+					<p class="subtitulos-aside">Proceso de creación de software</p>
+					<p><a href="#">Metodologías tradicionales</a></p>
+					<p><a href="#">Metodologías ágiles</a></p>
 
-				<p class="subtitulos-aside">Proceso de creación de software</p>
-				<p><a href="#">Metodologías tradicionales</a></p>
-				<p><a href="#">Metodologías ágiles</a></p>
-
-				<p class="subtitulos-aside">Documentación de sistemas</p>
-				<p><a href="#">Analisis de riesgos</a></p>
-				<p><a href="#">Estudio de factibilidad</a></p>
-				<p><a href="#">RES</a></p>
-				<p><a href="#">Calidad</a></p>
-				<p><a href="#">Plan de testing</a></p>
-				<p><a href="#">WBS</a></p>
-				<p><a href="#">GANTT</a></p>
-				<p><a href="#">Manual de usuario</a></p>
-				<p><a href="#">Diagramas</a></p>
-			-->
-
+					<p class="subtitulos-aside">Documentación de sistemas</p>
+					<p><a href="#">Analisis de riesgos</a></p>
+					<p><a href="#">Estudio de factibilidad</a></p>
+					<p><a href="#">RES</a></p>
+					<p><a href="#">Calidad</a></p>
+					<p><a href="#">Plan de testing</a></p>
+					<p><a href="#">WBS</a></p>
+					<p><a href="#">GANTT</a></p>
+					<p><a href="#">Manual de usuario</a></p>
+					<p><a href="#">Diagramas</a></p>
+				</div>
 			</aside>
 
 			<footer class="grid-footer">

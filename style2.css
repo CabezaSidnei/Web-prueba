@@ -6,7 +6,7 @@
 }
 
 .grid-item {
-    padding: 2vw;
+    padding: .8vh;
 }
 
 .menu-pc {
@@ -48,6 +48,8 @@ section {
 aside {
     background-color: #D6D4DD;
     flex-grow: 1;
+    padding: 0;
+    flex-basis: 4vh;
 }
 
 footer {
@@ -85,6 +87,20 @@ a {
 .grid-footer__item {
     margin-left: 6px;
     margin-right: 6px;
+}
+
+.menu-mobile {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.subtitulos-aside-mobile {
+    list-style-type: none;
+    
+}
+
+.subtitulos-aside-mobile li {
+    display: none;
 }
 
 @media screen and (min-width: 768px) {

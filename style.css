@@ -8,7 +8,20 @@
 .grid-header {
 	background: #B0AFB3;
 	flex-grow: 1;
-	flex-basis: .3vh;
+	flex-basis: 4vh;
+	width: 100%;
+}
+
+.nav__ul {
+    float: right;
+    list-style-type: none;
+    display: inline-flex;
+    margin-top: .8vh;
+}
+
+.nav__resp-ul {
+    display: none;
+    list-style-type: none;
 }
 
 .grid-section {

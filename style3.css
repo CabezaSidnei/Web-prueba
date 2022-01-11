@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    background-color: beige;
+    height: 5vh;
+}
+
+.section {
+    background-image: url(imagenes/fondo-responsive.jpg);
+    background-size: cover;
+    background-position: center;
+    flex-grow: 1;
+}
+
+.aside {
+    background-color: burlywood;
+    height: 5vh;
+}
+
+.footer {
+    background-color: cadetblue;
+    height: 5vh;
+}
+
+.nav-container {
+    position: relative;
+    
+}
+
+.nav-menu {
+    float: right;
+}
+
+.nav-menu li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.img-logo {
+    width: 10vh;
+}
+
+.logo-nav {
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+/**Pantalla tablet**/
+@media  screen and (min-width: 600px) {
+    .container {
+        display: grid;
+        grid-template-columns: 5vw 1fr 1fr 1fr 1fr;
+        grid-template-rows: 5vh 1fr 1fr 1fr 5vh;
+    }
+
+    .header {
+        grid-column: 1 / 6;
+        grid-row: 1;
+    }
+
+    .section {
+        grid-column: 2 / 6;
+        grid-row: 2 / 5;
+    }
+
+    .aside {
+        grid-column: 1;
+        grid-row: 2 / 5;
+        width: 80px;
+        height: 100%;
+    }
+
+    .footer {
+        grid-column: 1 / 6;
+        grid-row: 5;
+    }
+}
+
+/**Pantalla PC**/
+@media screen and (min-width: 900px) {
+    .aside {
+        width: 250px;
+    }
+}

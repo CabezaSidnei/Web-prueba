@@ -1,59 +1,75 @@
-class Animal {
-    constructor(especie,edad,color){
-        this.especie = especie;
-        this.edad = edad;
+ class Celular {
+     constructor(color,peso,rdp,rdc,ram){
         this.color = color;
-    }
+        this.peso = peso;
+        this.rdp = rdp;
+        this.rdc = rdc;
+        this.ram = ram;
+        this.encendido = false;
+     }
+     botonEncendido(){
+        if (!this.encendido) {
+            alert("Encender");
+            this.encendido = true;
+        }else{
+            alert("Apagar");
+            this.encendido = false;
+        }
+     }
 
-    verInfo(){
-    }
+     reiniciar(){
+        if (this.encendido) {
+            alert("Reiniciando...");
+        }else{
+            alert("El celular esta apagado, enciendalo primero.");
+        }
+     }
 
-    ladrar(){        
-    }
+     tomarFoto(){
+        alert(`Foto tomada con camara de ${this.rdc}`);
+     }
 
-    get getEspecie(){
-        return this.especie;
-    } 
+     grabarVideo(){
+        alert(`Video grabado con video de: ${this.rdc}`)
+     }
 
-    set setEspecie(especie){
-        this.especie = especie;
-    }
+     mostrarInfo(){
+         return `
+         Color: <b>${this.color}</b><br>
+         Peso: <b>${this.peso}</b><br>
+         Resolucion pantalla: <b>${this.rdp}</b><br>
+         Resolucion camara: <b>${this.rdc}</b><br>
+         Memoria RAM: <b>${this.ram}</b><br><br>
+         `;
+     }
 }
 
-class Perro extends Animal{
-    constructor(especie,edad,color,raza){
-        super(especie,edad,color);
-        this.raza = raza;
-        this.info = `Soy ${this.especie}, tengo ${this.edad}, color: ${this.color}, raza: ${this.raza}`;
-    }        
-    static ladrar(){
-        document.write("guau" + "<br>");
+class CelularAltaGama extends Celular{
+    constructor(color,peso,rdp,rdc,ram,camaraLenta,reconFacial,extraCamara){
+        super(color,peso,rdp,rdc,ram);
+        this.camaraLenta = camaraLenta;
+        this.reconFacial = reconFacial;
+        this.extraCamara = extraCamara;
     }
-
-    verInfo(){
-        document.write(this.info + "<br>");
-    }
-
-}
-
-class Gato extends Animal{
-    constructor(especie,edad,color,raza){
-        super(especie,edad,color);
-        this.raza = raza;
-        this.info = `Soy ${this.especie}, tengo ${this.edad}, color: ${this.color}`;
-    }        
-    ladrar(){
-       document.write("miau" + "<br>");
-    }
-    verInfo(){
-        document.write(this.info + "<br>");
+    mostrarInfoAltaGama(){
+        return this.mostrarInfo() + `
+            Camara Lenta: <b>${this.camaraLenta}</b><br>
+            Reconocimiento facial: <b>${this.reconFacial}</b><br>
+            Extra camara: <b>${this.extraCamara}</b><br><br>
+            `;
     }
 }
+ 
+const cel = new Celular("azul","35gr","3500px","16mpx","1,2gb");
+const cel2 = new Celular("negro","50gr","400px","12mpx","1.8gb");
+const cel3 = new Celular("blanco","300gr","800px","18mpx","2gb");
+const cel4 = new CelularAltaGama("Rojo","50gr","600px","20mpx","5GB","SI","SI","15mpx");
 
-const  perro = new Perro("perro","9","negro","Rotweiller");
-const gato = new Gato("gato","5","blanco","tigre");
-const pajaro = new Animal("pajaro","1","azul");
+document.write(`
+${cel.mostrarInfo()}
+${cel2.mostrarInfo()}
+${cel3.mostrarInfo()}
+${cel4.mostrarInfoAltaGama()}`);
 
-document.write(perro.getEspecie);
 
 

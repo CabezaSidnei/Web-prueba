@@ -5,7 +5,7 @@ let valorAntiguo = boton.value;
 boton.value = valorAntiguo.toUpperCase();
 
 function crearLLave(nombre,modelo,precio){
-    img =`<img class ="llave-img" src ="llave.png">`;
+    img =`<img class ="llave-img" src ="imagenes/llave.png">`;
     nombre = `<h2>LLave: ${nombre}</h2>`;
     modelo = `<h3>Modelo: ${modelo}</h3>`;
     precio = `<p>Precio: <b>$${precio}</b></p>`; 

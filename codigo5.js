@@ -1,17 +1,12 @@
-let alto = window.screen.availHeight;
-let ancho = window.screen.availWidth;
-let url = window.location.href;
-let protocol = window.location.protocol;
-let host = window.location.hostname;
-let patName = window.location.pathname;
+const input = document.querySelector(".input-prueba");
+const cont = document.querySelector(".selecionado");
 
-let html = `La url es: ${url}<br>
-El host es: ${host}<br>
-El nombre de ruta es: ${patName}<br>
-El protocolo es: ${protocol}`;
-
-document.write(html);
-
-
-
- 
+input.addEventListener("select",(e)=>{
+    
+    let star = e.target.selectionStar;
+    let end = e.target.selectionEnd;
+    let textContent = input.value;
+    cont.innerHTML = textContent.substring(star,end);
+    
+    
+});

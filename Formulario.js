@@ -2,18 +2,18 @@ const nombre = document.getElementById("nombre");
 const email = document.getElementById("email");
 const materia = document.getElementById("materia");
 const boton = document.getElementById("solicitar");
-const resultado = document.querySelector(".resultado");
+const prevRes = document.querySelector(".prevRes");
 
 boton.addEventListener("click",(e)=>{
     e.preventDefault();
     let error = validarCampos();
     if (error[0]) {
-        resultado.innerHTML = error[1];
-        resultado.classList.add("red");
+        prevRes.innerHTML = error[1];
+        prevRes.classList.add("red");
     } else {
-        resultado.innerHTML = "Solicitud enviada correctamente";
-        resultado.classList.add("green");
-        resultado.classList.remove("red");
+        prevRes.innerHTML = "Solicitud enviada correctamente";
+        prevRes.classList.add("green");
+        prevRes.classList.remove("red");
     }
 });
 

@@ -28,6 +28,9 @@ function calculo(btn,pantalla) {
         case "=":
             calcular(pantalla);
             break;
+        case "<":
+            retroceso(pantalla);
+            break;
         default:
             actualizar(pantalla, btn);
             break;
@@ -50,25 +53,28 @@ function borrar (pantalla) {
     pantalla.value = "";
 }
 
-  /*Codigo para arrastrar y soltar (Anda pero con fallos)*/
-  let dragValue;
+function retroceso (pantalla) {
+    pantalla.value = pantalla.value.slice(0, -1); 
+}
 
-  function mover(id) {
-      let element = document.getElementById("calculadora");
-      element.style.position = "absolute";
-      element.onmousedown = function(){
-          dragValue = element;
-      }
-  }
+/*Codigo para arrastrar y soltar (Anda pero con fallos)*/
+let dragValue;
 
-  document.onmouseup = function(e) {
-        dragValue = null;
-  }
+function mover(id) {
+    let calculadora = document.getElementById("calculadora");
+    calculadora.style.position = "absolute";
+    calculadora.onmousedown = function(){
+        dragValue = calculadora;
+    }
+}
 
-  document.onmousemove = function(e){
-      let x = e.pageX;
-      let y = e.pageY;
+document.onmousemove = function(e){
+    let x = e.pageX;
+    let y = e.pageY;
+    dragValue.style.left = x + "px";
+    dragValue.style.top = y + "px";
+}
 
-      dragValue.style.left = x + "px";
-      dragValue.style.top = y + "px";
-  }
+document.onmouseup = function(e) {
+    dragValue = null;
+}

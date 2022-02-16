@@ -1,0 +1,13 @@
+.reloj {
+    width: 120px;
+    height: 50px;
+    margin: 30px;
+    padding: 12px;
+    text-align: center;
+    background: rgb(164, 173, 173);
+    border-radius: 5%;
+}
+
+#hora {
+    font-size: 130%;
+}

@@ -54,7 +54,8 @@ function borrar (pantalla) {
 }
 
 function retroceso (pantalla) {
-    pantalla.value = pantalla.value.slice(0, -1); 
+    pantalla.value = pantalla.value.slice(0, -1);
+     
 }
 
 /*Codigo para arrastrar y soltar (Anda pero con fallos)*/
